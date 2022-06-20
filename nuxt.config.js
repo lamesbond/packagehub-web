@@ -4,7 +4,7 @@ module.exports = {
   },
 
   head: {
-    title: '尚融宝',
+    title: 'packagehub',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -12,13 +12,13 @@ module.exports = {
         hid: 'meta-key-words',
         name: 'keywords',
         content:
-          '尚融宝官网_纽交所上市企业，网络借贷平台，解决个人小额借款、短期借款问题。 资金银行存管，安全保障。',
+          'packagehub，刘布斯精心打造，为您提供卓越的制品托管服务',
       },
       {
         hid: 'description',
         name: 'description',
         content:
-          '尚融宝官网_纽交所上市企业，网络借贷平台，解决个人小额借款、短期借款问题。 资金银行存管，安全保障。',
+          'packagehub，刘布斯精心打造，为您提供卓越的制品托管服务',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
