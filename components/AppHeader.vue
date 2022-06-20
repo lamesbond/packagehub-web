@@ -2,10 +2,6 @@
   <header>
     <div class="header-top min-width">
       <div class="container fn-clear">
-        <strong class="fn-left">
-          咨询热线：400-000-0000
-          <span class="s-time">服务时间：9:00 - 18:00</span>
-        </strong>
         <ul class="header_contact">
           <li class="c_1">
             <a class="ico_head_weixin" id="wx"></a>
@@ -20,34 +16,24 @@
               <b class="ico_head_sina"></b>
             </a>
           </li>
+          <li class="c_4"><NuxtLink to="/download" :class="{ 'c-orange': $route.fullPath === '/download' }">下载</NuxtLink></li>
+          <li class="c_4"><NuxtLink to="/doc" :class="{ 'c-orange': $route.fullPath === '/doc' }">文档</NuxtLink></li>
         </ul>
 
         <!-- 用户未登录 -->
         <ul v-if="!userInfo" class="fn-right header-top-ul">
           <!-- <li><a href="" :class="'c-orange'">测试</a></li> -->
           <li>
-            <NuxtLink to="/" :class="{ 'c-orange': $route.fullPath === '/' }"
-              >返回首页</NuxtLink
-            >
+            <NuxtLink to="/" :class="{ 'c-orange': $route.fullPath === '/' }">返回首页</NuxtLink>
           </li>
           <li>
             <div class="">
-              <NuxtLink
-                to="/register"
-                :class="{ 'c-orange': $route.fullPath === '/register' }"
-              >
-                免费注册
-              </NuxtLink>
+              <NuxtLink to="/register" :class="{ 'c-orange': $route.fullPath === '/register' }">免费注册</NuxtLink>
             </div>
           </li>
           <li>
             <div class="">
-              <NuxtLink
-                to="/login"
-                :class="{ 'c-orange': $route.fullPath === '/login' }"
-              >
-                登录
-              </NuxtLink>
+              <NuxtLink to="/login" :class="{ 'c-orange': $route.fullPath === '/login' }">登录</NuxtLink>
             </div>
           </li>
         </ul>
@@ -77,29 +63,7 @@
         </ul>
       </div>
     </div>
-    <div class="header min-width">
-      <div class="container">
-        <div class="fn-left logo">
-          <NuxtLink to="/">
-            <img src="~/assets/images/logo.png" title="" />
-          </NuxtLink>
-        </div>
-        <ul class="top-nav fn-clear">
-          <li :class="{ on: $route.fullPath === '/' }">
-            <NuxtLink to="/">首页</NuxtLink>
-          </li>
-          <li :class="{ on: $route.fullPath === '/list' }">
-            <NuxtLink to="/lend"> 我要投资 </NuxtLink>
-          </li>
-          <li :class="{ on: $route.fullPath === '/help' }">
-            <NuxtLink to="/help">安全保障</NuxtLink>
-          </li>
-          <li :class="{ on: $route.fullPath === '/about' }">
-            <NuxtLink to="/about">关于我们</NuxtLink>
-          </li>
-        </ul>
-      </div>
-    </div>
+
   </header>
 </template>
 <script>

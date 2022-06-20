@@ -42,19 +42,19 @@
             <div class="ft-serv-handle clearfix">
               <a
                 class="icon-hdSprite icon-ft-sina a-move a-moveHover"
-                title="尚融宝新浪微博"
+                title="packagehub新浪微博"
                 target="_blank"
                 href="#"
               ></a>
               <a
                 class="icon-hdSprite icon-ft-qqweibo a-move a-moveHover"
-                title="尚融宝腾讯微博"
+                title="packagehub腾讯微博"
                 target="_blank"
                 href="#"
               ></a>
               <a
                 class="icon-ft-qun a-move a-moveHover"
-                title="尚融宝QQ群"
+                title="packagehubQQ群"
                 target="_blank"
                 href="#"
               ></a>
@@ -91,9 +91,9 @@
         </a>
       </div>
       <div class="ft-identity">
-        ©2020 尚融宝 All rights reserved&nbsp;&nbsp;&nbsp;
+        ©2022 packagehub All rights reserved&nbsp;&nbsp;&nbsp;
         <span class="color-e6">|</span>&nbsp;&nbsp;&nbsp;
-        北京市尚融宝投资管理有限公司&nbsp;&nbsp;&nbsp;
+        apple in california&nbsp;&nbsp;&nbsp;
         <span class="color-e6">|</span>&nbsp;&nbsp;&nbsp;
         <a target="_blank" href="http://www.miitbeian.gov.cn/">
           京ICP备12345678号-1

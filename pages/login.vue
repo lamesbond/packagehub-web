@@ -6,25 +6,18 @@
       <div class="registerCont">
         <ul>
           <li>
-            <span class="dis"></span>
-            <input v-model="userInfo.userType" type="radio" value="1" />
-            投资人
-            <input v-model="userInfo.userType" type="radio" value="2" />
-            借款人
+            <span class="dis">邮箱：</span>
+            <input class="input" v-model="userInfo.email" />
           </li>
-          <li>
-            <span class="dis">手机号：</span>
-            <input class="input" v-model="userInfo.mobile" />
-          </li>
-
           <li>
             <span class="dis">密码：</span>
             <input class="input" v-model="userInfo.password" type="password" />
           </li>
           <li class="btn">
-            <button @click="login()" :class="{ disabled: !isValid }">
-              立即登录
-            </button>
+            <button @click="login()" :class="{ disabled: !isValid }">立即登录</button>
+          </li>
+          <li class="btn">
+            <button @click="forgetPassword()" :class="{ disabled: !isValid }">忘记密码?</button>
           </li>
         </ul>
       </div>
