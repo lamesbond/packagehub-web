@@ -1,8 +1,9 @@
 <template>
   <div>
     <h1>这是下载页面</h1>
-    <el-card v-for="item in docList" class="box-card">
-      <div class="text item">{{item}}</div>
+    <el-card v-for="item in projectList" class="box-card">
+<!--      <div class="text item">{{item.name}}</div>-->
+      <NuxtLink :to="{name: 'download-name', params: {id: item.id, name: item.name}}" target="_black">{{item.name}}</NuxtLink>
     </el-card>
   </div>
 </template>
@@ -12,12 +13,20 @@ export default {
   name: "",
   data() {
     return {
-      docList: [
-        '111111111',
-        '222222222',
-        '333333333'
+      projectList: [
       ]
     }
+  },
+  created() {
+    this.fetchData()
+  },
+  methods: {
+    fetchData() {
+      this.$axios.$get('/api/core/project/listChildCategoryById/' + 0 + '/' + 0).then((response) => {
+        this.projectList = response.data.childList
+      })
+    }
+
   }
 }
 </script>
