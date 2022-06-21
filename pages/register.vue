@@ -78,10 +78,10 @@ export default {
       console.log('倒计时')
       this.leftSecond = this.second
 
-      const timmer = setInterval(() => {
+      const timer = setInterval(() => {
         this.leftSecond--
         if (this.leftSecond <= 0) {
-          clearInterval(timmer)
+          clearInterval(timer)
           this.leftSecond = this.second
           this.sending = false
         }
@@ -90,7 +90,7 @@ export default {
 
     //注册
     register() {
-      this.$axios.$post('/api/core/userInfo/register', this.userInfo).then((response) => {
+      this.$axios.$post('/api/core/user/register', this.userInfo).then((response) => {
         this.step = 2
       })
     },

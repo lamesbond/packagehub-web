@@ -42,7 +42,7 @@ export default {
   methods: {
     //登录
     login() {
-      this.$axios.$post('/api/core/userInfo/login', this.userInfo)
+      this.$axios.$post('/api/core/user/login', this.userInfo)
       .then((response) => {
         cookie.set('userInfo', response.data.userInfo)
         window.location.href = '/user'

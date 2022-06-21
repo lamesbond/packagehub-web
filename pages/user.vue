@@ -6,8 +6,7 @@
         <img src="~/assets/images/clist1.jpg" width="1200" height="96" />
       </div>
       <div class="personal-left">
-        <InvestorNav v-if="userType === 1" />
-        <BorrowerNav v-if="userType === 2" />
+        <UserNav />
       </div>
       <NuxtChild />
       <div class="clear"></div>
@@ -17,15 +16,11 @@
 
 <script>
 import '~/assets/css/user.css'
-import InvestorNav from '~/components/InvestorNav'
-import BorrowerNav from '~/components/BorrowerNav'
+import UserNav from '@/components/UserNav'
 import cookie from 'js-cookie'
 
 export default {
-  components: {
-    InvestorNav,
-    BorrowerNav,
-  },
+  components: { UserNav },
 
   data() {
     return {

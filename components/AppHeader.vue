@@ -44,7 +44,7 @@
           <li>
             <div class="">
               <NuxtLink to="/user" class="user" title="我的账户">
-                <i class="el-icon-user-solid">{{ userInfo.nickName }}</i>
+                <i class="el-icon-user-solid">{{ userInfo.email }}</i>
               </NuxtLink>
             </div>
           </li>
@@ -88,7 +88,7 @@ export default {
       }
       userInfo = JSON.parse(userInfo)
       this.$axios({
-        url: '/api/core/userInfo/checkToken',
+        url: '/api/core/user/checkToken',
         method: 'get',
         // headers: {
         //   token: userInfo.token,
