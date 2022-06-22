@@ -44,7 +44,6 @@ export default {
     showInfo() {
       let userInfo = cookie.get('userInfo')
       if (!userInfo) {
-        console.log('cookie不存在')
         this.userInfo = null
         return
       }
@@ -56,7 +55,6 @@ export default {
         //   token: userInfo.token,
         // }
       }).then((response) => {
-        console.log('校验成功')
         this.userInfo = userInfo
       })
     },

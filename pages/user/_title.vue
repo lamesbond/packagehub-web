@@ -2,7 +2,7 @@
   <div>
     <el-container>
       <el-aside>
-        <h1>这是项目文档详情页面</h1>
+        <h1>这是我的项目文档详情页面</h1>
         <el-cascader
             v-model="value"
             :props="optionProps"

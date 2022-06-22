@@ -2,7 +2,6 @@
   <div>
     <h1>这是文档页面</h1>
     <el-card v-for="item in docList" class="box-card">
-      <!--      <div class="text item">{{item.name}}</div>-->
       <NuxtLink :to="{name: 'doc-title', params: {title: item.title, id: item.id}}" target="_black">{{item.title}}</NuxtLink>
     </el-card>
   </div>

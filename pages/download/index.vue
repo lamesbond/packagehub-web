@@ -2,7 +2,6 @@
   <div>
     <h1>这是下载页面</h1>
     <el-card v-for="item in projectList" class="box-card">
-<!--      <div class="text item">{{item.name}}</div>-->
       <NuxtLink :to="{name: 'download-name', params: {name: item.name, id: item.id}}" target="_black">{{item.name}}</NuxtLink>
     </el-card>
   </div>
