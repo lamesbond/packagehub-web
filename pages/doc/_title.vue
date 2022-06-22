@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>这是项目文件详情页面</h1>
+    <h1>这是项目文档详情页面</h1>
     <el-cascader
         v-model="value"
         :props="optionProps"
@@ -9,7 +9,7 @@
     </el-cascader>
     <h3>{{this.releaseNote}}</h3>
     <el-card v-for="item in projectList" class="box-card">
-      <h1>{{item.name}}</h1> <a @click="handleDownload(item.name, item.url, 1)">下载</a>
+      <h1>{{item.title}}</h1>
     </el-card>
   </div>
 </template>
@@ -27,7 +27,7 @@ export default {
     return {
       optionProps: {
         value: 'id',
-        label: 'name',
+        label: 'title',
         children: 'children'
       },
       value: [],
@@ -46,27 +46,20 @@ export default {
     },
     handleChange(value) {
       let index = value.length - 1
-      this.$axios.$get('/api/core/project/listAllChildNode/' + value[index]).then((response) => {
+      this.$axios.$get('/api/core/doc/listAllChildNode/' + value[index]).then((response) => {
         this.projectList = response.data.childList
       })
-      this.$axios.$get('/api/core/project/getOne/' + value[index]).then((response) => {
-        this.releaseNote = response.data.project.releaseNote
+      this.$axios.$get('/api/core/doc/getOne/' + value[index]).then((response) => {
+        this.releaseNote = response.data.doc.releaseNote
       })
     },
-    handleDownload(name,url) {
-      var a = document.createElement('a');
-      var event = new MouseEvent('click');
-      a.download = name;
-      a.href = url;
-      a.dispatchEvent(event);
-    }
   },
   mounted() {
     if (typeof(this.id)!="undefined"){
-      localStorage.setItem('currentProjectId', this.id)
+      localStorage.setItem('currentDocId', this.id)
     }
 
-    this.$axios.$get('/api/core/project/listAllChildNode/' + localStorage.getItem('currentProjectId')).then((response) => {
+    this.$axios.$get('/api/core/doc/listAllChildNode/' + localStorage.getItem('currentDocId')).then((response) => {
       this.options = response.data.childList
     })
   }

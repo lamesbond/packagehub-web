@@ -2,7 +2,8 @@
   <div>
     <h1>这是文档页面</h1>
     <el-card v-for="item in docList" class="box-card">
-      <div slot="scope" class="text item"><span>{{item}}</span></div>
+      <!--      <div class="text item">{{item.name}}</div>-->
+      <NuxtLink :to="{name: 'doc-title', params: {title: item.title, id: item.id}}" target="_black">{{item.title}}</NuxtLink>
     </el-card>
   </div>
 </template>
@@ -13,10 +14,17 @@ export default {
   data() {
     return {
       docList: [
-        '111111111',
-        '222222222',
-        '333333333'
       ]
+    }
+  },
+  created() {
+    this.fetchData()
+  },
+  methods: {
+    fetchData() {
+      this.$axios.$get('/api/core/doc/listNextChildNode/' + 0 + '/' + 0).then((response) => {
+        this.docList = response.data.childList
+      })
     }
   }
 
